@@ -19,11 +19,15 @@
   }
 }
 
+html {
+  font-size: var(--font-size-base);
+}
+
 body {
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   background-color: var(--background-color);
   color: var(--primary-color);
-  font-size: var(--font-size-base);
+  font-size: 1rem;
   line-height: var(--line-height-base);
   -webkit-font-smoothing: antialiased;
 }
