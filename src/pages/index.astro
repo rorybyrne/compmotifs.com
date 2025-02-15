@@ -19,18 +19,36 @@ const researchAreas = [
   }
 ];
 
-const recentPublications = [
+const members = [
   {
-    title: "Emergent Patterns in Multi-Agent Systems",
-    authors: "Zhang, Smith, et al.",
-    year: 2024,
-    journal: "Journal of Complex Systems"
+    name: "Dr. Sarah Chen",
+    role: "Principal Investigator",
+    affiliation: "Oxford University",
+    area: "Scientific Machine Learning"
   },
   {
-    title: "Neural Networks for Physical System Identification",
-    authors: "Johnson, Patel, et al.",
-    year: 2024,
-    journal: "Scientific Machine Learning Review"
+    name: "Dr. James Wilson",
+    role: "Senior Researcher",
+    affiliation: "Cambridge University",
+    area: "Complex Systems"
+  },
+  {
+    name: "Dr. Aisha Patel",
+    role: "Research Lead",
+    affiliation: "Imperial College London",
+    area: "Computational Chemistry"
+  },
+  {
+    name: "Dr. Marcus Rodriguez",
+    role: "Senior Researcher",
+    affiliation: "Oxford University",
+    area: "High-Performance Computing"
+  },
+  {
+    name: "Dr. Emma Thompson",
+    role: "Research Lead",
+    affiliation: "Cambridge University",
+    area: "Computational Biology"
   }
 ];
 ---
@@ -98,6 +116,18 @@ We'll be sending out invitations soon. If you're working on computational approa
     <!--   </Sidenote> -->
     <!-- </p> -->
 
+    <h2>Our Team</h2>
+    <div class="members-grid">
+      {members.map((member) => (
+        <div class="member-card">
+          <h3>{member.name}</h3>
+          <p class="member-role">{member.role}</p>
+          <p class="member-affiliation">{member.affiliation}</p>
+          <p class="member-area">{member.area}</p>
+        </div>
+      ))}
+    </div>
+
     <div class="contact-section">
       <h3>Get in Touch</h3>
       <p>
@@ -152,9 +182,55 @@ We'll be sending out invitations soon. If you're working on computational approa
     border-top: 1px solid #ddd;
   }
 
+  .members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .member-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
+
+  .member-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .member-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+  }
+
+  .member-role {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 0.2rem 0;
+  }
+
+  .member-affiliation {
+    color: var(--side-note-color);
+    font-style: italic;
+    margin: 0.2rem 0;
+  }
+
+  .member-area {
+    color: var(--side-note-color);
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+  }
+
   @media (max-width: 760px) {
     .lead {
       font-size: 1.2rem;
+    }
+    
+    .members-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>
