@@ -5,13 +5,13 @@
   --text-color: #111;
   --side-note-color: #666;
   --link-color: #111;
-  --text-width: 72%;
-  --side-note-width: 50%;
+  --text-width: 770px;
+  --side-note-width: 350px;
   --font-size-base: 16px;
   --line-height-base: 1.6;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
   :root {
     --text-width: 85%;
     --side-note-width: 85%;
@@ -97,13 +97,13 @@ code {
 /* Container for main content */
 .main-content {
   width: var(--text-width);
-  margin-left: 12.5%;
-  margin-right: 12.5%;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
   .main-content {
     width: 84%;
     margin-left: 8%;
