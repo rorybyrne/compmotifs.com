@@ -24,19 +24,22 @@ const members = [
     name: "Jascha Achterberg",
     role: "Co-lead",
     affiliation: "Oxford University",
-    area: "Computational Neuroscience"
+    area: "Computational Neuroscience",
+    website: "https://jascha.xyz"
   },
   {
     name: "Dr. James Wilson",
     role: "Senior Researcher",
     affiliation: "Cambridge University",
-    area: "Complex Systems"
+    area: "Complex Systems",
+    website: "https://wilson-lab.org"
   },
   {
     name: "Dr. Aisha Patel",
     role: "Research Lead",
     affiliation: "Imperial College London",
-    area: "Computational Chemistry"
+    area: "Computational Chemistry",
+    website: "https://patel-group.ic.ac.uk"
   },
   {
     name: "Dr. Marcus Rodriguez",
@@ -48,7 +51,8 @@ const members = [
     name: "Dr. Emma Thompson",
     role: "Research Lead",
     affiliation: "Cambridge University",
-    area: "Computational Biology"
+    area: "Computational Biology",
+    website: "https://thompson-lab.cam.ac.uk"
   }
 ];
 ---
@@ -120,7 +124,15 @@ We'll be sending out invitations soon. If you're working on computational approa
     <div class="members-grid">
       {members.map((member) => (
         <div class="member-card">
-          <h3>{member.name}</h3>
+          <h3>
+            {member.website ? (
+              <a href={member.website} class="member-name-link" target="_blank" rel="noopener noreferrer">
+                {member.name}
+              </a>
+            ) : (
+              member.name
+            )}
+          </h3>
           <p class="member-role">{member.role}</p>
           <p class="member-affiliation">{member.affiliation}</p>
           <p class="member-area">{member.area}</p>
@@ -205,6 +217,16 @@ We'll be sending out invitations soon. If you're working on computational approa
   .member-card h3 {
     margin: 0 0 0.5rem 0;
     font-size: 1.2rem;
+  }
+
+  .member-name-link {
+    background: none;
+    color: var(--primary-color);
+    transition: opacity 0.2s ease;
+  }
+
+  .member-name-link:hover {
+    opacity: 0.7;
   }
 
   .member-role {
