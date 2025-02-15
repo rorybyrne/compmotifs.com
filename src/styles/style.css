@@ -97,7 +97,7 @@ code {
 /* Container for main content */
 .main-content {
   width: var(--text-width);
-  margin-left: auto;
+  margin-left: 12.5%;
   margin-right: auto;
   padding-top: 4rem;
   padding-bottom: 4rem;
