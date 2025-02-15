@@ -35,60 +35,68 @@ const recentPublications = [
 ];
 ---
 
-<TufteLayout title="Computational Science Research Collective">
-  <Article title="Computational Science Research Collective" author="Advancing Scientific Understanding Through Computation">
+<TufteLayout title="Computational Motifs Initiative">
+  <Article title="Computational Motifs Initiative" author="Advancing the natural sciences through computational methods">
     <p class="lead">
-      We are an interdisciplinary group of researchers using computational methods
-      to advance scientific understanding across multiple domains.
+		We are a group of 15 computational scientists working across Oxford, Cambridge, and Imperial College London - united by a mission to accelerate scientific discovery through computational methods and tools.
       <Sidenote number={1}>
-        Founded in 2020, our collective brings together experts from computer science,
-        physics, biology, and mathematics.
+        Founded in 2024, our collective brings together experts from chemistry,
+				biology, computer science, and physics.
       </Sidenote>
+	</p>
+	<p>
+		We focus on computational motifs – shared patterns and challenges that appear across scientific disciplines. By identifying and solving these core bottlenecks, we can create impact at scale, accelerating discovery across multiple fields simultaneously. This interdisciplinary approach allows us to spot opportunities that might be missed when working within traditional boundaries.
     </p>
 
-    <h2>Our Approach</h2>
+    <h2>Our Mental Framework</h2>
     <p>
-      Our work combines rigorous mathematical foundations with cutting-edge
-      computational techniques.
-      <Sidenote number={2}>
-        We primarily use Julia and Python for our research, with custom C++
-        implementations for performance-critical components.
-      </Sidenote>
+		Our approach systematically breaks down the scientific pipeline into three core components: exploration, collaboration, and experimentation, examining how computational advances can transform each stage. We analyze fundamental bottlenecks and identify computational solutions, developing both practical tools for immediate acceleration and novel algorithms that enable entirely new ways of conducting science. This dual focus - on both enhancing existing processes and pioneering new computational methodologies - allows us to work toward both immediate improvements and transformative breakthroughs in how computational science is conducted across disciplines.
+      <!-- <Sidenote number={2}> -->
+      <!--   We primarily use Julia and Python for our research, with custom C++ -->
+      <!--   implementations for performance-critical components. -->
+      <!-- </Sidenote> -->
     </p>
 
-    <h2>Research Areas</h2>
-    <div class="research-areas">
-      {researchAreas.map((area, index) => (
-        <div class="research-area">
-          <h3>{area.title}</h3>
-          <p>{area.description}</p>
-        </div>
-      ))}
-    </div>
+	<h2>We're Coming to San Francisco</h2>
+		<p>
+			This March, we're bringing our team to the Bay Area for a 2.5-day workshop focused on computational approaches to accelerating scientific discovery. Throughout the workshop, we'll share our insights into computational bottlenecks we've identified across scientific disciplines and demonstrate a suite of open-source tools we've developed for accelerating experimentation.
+The workshop will combine presentations with hands-on hackathon sessions, creating space for immediate collaboration on ideas and tools. We're excited to connect with local academics and innovators working on similar challenges in computational science.
+We'll be sending out invitations soon. If you're working on computational approaches to accelerate scientific discovery and would like to join us, stay tuned for more details.
+		</p>
 
-    <h2>Recent Publications</h2>
-    <div class="publications">
-      {recentPublications.map((pub, index) => (
-        <div class="publication">
-          <p class="pub-title">{pub.title}</p>
-          <p class="pub-details">
-            {pub.authors} ({pub.year})
-            <Sidenote>
-              Published in {pub.journal}
-            </Sidenote>
-          </p>
-        </div>
-      ))}
-    </div>
+    <!-- <h2>Research Areas</h2> -->
+    <!-- <div class="research-areas"> -->
+    <!--   {researchAreas.map((area, index) => ( -->
+    <!--     <div class="research-area"> -->
+    <!--       <h3>{area.title}</h3> -->
+    <!--       <p>{area.description}</p> -->
+    <!--     </div> -->
+    <!--   ))} -->
+    <!-- </div> -->
 
-    <h2>Join Our Work</h2>
-    <p>
-      We welcome collaborations with researchers and institutions worldwide.
-      <Sidenote number={3}>
-        Current opportunities include postdoctoral positions and graduate
-        student openings.
-      </Sidenote>
-    </p>
+    <!-- <h2>Recent Publications</h2> -->
+    <!-- <div class="publications"> -->
+    <!--   {recentPublications.map((pub, index) => ( -->
+    <!--     <div class="publication"> -->
+    <!--       <p class="pub-title">{pub.title}</p> -->
+    <!--       <p class="pub-details"> -->
+    <!--         {pub.authors} ({pub.year}) -->
+    <!--         <Sidenote> -->
+    <!--           Published in {pub.journal} -->
+    <!--         </Sidenote> -->
+    <!--       </p> -->
+    <!--     </div> -->
+    <!--   ))} -->
+    <!-- </div> -->
+
+    <!-- <h2>Join Our Work</h2> -->
+    <!-- <p> -->
+    <!--   We welcome collaborations with researchers and institutions worldwide. -->
+    <!--   <Sidenote number={3}> -->
+    <!--     Current opportunities include postdoctoral positions and graduate -->
+    <!--     student openings. -->
+    <!--   </Sidenote> -->
+    <!-- </p> -->
 
     <div class="contact-section">
       <h3>Get in Touch</h3>
