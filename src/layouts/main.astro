@@ -1,5 +1,6 @@
 ---
 import '../styles/style.css';
+import '../styles/et-book.css';  // Add this line
 
 interface Props {
   title: string;
@@ -17,8 +18,6 @@ const { title, description = "A Tufte-style website" } = Astro.props;
     <meta name="description" content={description} />
     <title>{title}</title>
     
-    <!-- ET Book fonts -->
-    <link rel="stylesheet" href="/fonts/et-book.css">
   </head>
   <body>
     <div class="main-content">

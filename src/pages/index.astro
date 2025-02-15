@@ -23,55 +23,85 @@ const members = [
   {
     name: "Wojtek Treyde",
     role: "Co-lead",
+    affiliation: "University of Cambridge",
+    area: "Complex Systems",
     website: "https://www.ineosoxford.ox.ac.uk/person/wojtek-treyde"
   },
   {
     name: "Kieran Didi",
     role: "Co-lead",
+    affiliation: "University of Cambridge",
+    area: "Complex Systems",
     website: "https://kdidi.netlify.app/"
   },
   {
     name: "Jascha Achterberg",
     role: "Co-lead",
+    affiliation: "Oxford University",
+    area: "Computational Neuroscience",
     website: "https://www.jachterberg.com/"
   },
   {
     name: "Rory Byrne",
     role: "Lead-hacker",
+    affiliation: "University of Cambridge",
+    area: "Computational Neuroscience",
     website: "https://rory.bio/"
   },
   {
-    name: "Kristina Kordova"
+    name: "Kristina Kordova",
+    affiliation: "University of Cambridge",
+    area: "Complex Systems",
   },
   {
-    name: "Michał Wójcik"
+    name: "Michał Wójcik",
+    affiliation: "Oxford University",
+    area: "Computational Neuroscience",
   },
   {
-    name: "Puria Radmard"
+    name: "Puria Radmard",
+    affiliation: "University of Cambridge",
+    area: "Computational Neuroscience",
   },
   {
-    name: "Eva Sevenster"
+    name: "Eva Sevenster",
+    affiliation: "University of Cambridge",
+    area: "Complex Systems",
   },
   {
-    name: "Inga Van den Bossche"
+    name: "Inga Van den Bossche",
+    affiliation: "University of Cambridge",
+    area: "Complex Systems",
   },
   {
-    name: "Austin Mroz"
+    name: "Austin Mroz",
+    affiliation: "University of Cambridge",
+    area: "Complex Systems",
   },
   {
-    name: "Dan Akarca"
+    name: "Dan Akarca",
+    affiliation: "Imperial College London",
+    area: "Computational Neuroscience",
   },
   {
-    name: "Jakub Lála"
+    name: "Jakub Lála",
+    affiliation: "University of Cambridge",
+    area: "Complex Systems",
   },
   {
-    name: "Martin Buttenschoen"
+    name: "Martin Buttenschoen",
+    affiliation: "University of Cambridge",
+    area: "Complex Systems",
   },
   {
-    name: "Filip Szczypiński"
+    name: "Filip Szczypiński",
+    affiliation: "University of Cambridge",
+    area: "Complex Systems",
   },
   {
-    name: "Aleksy Kwiatkowski"
+    name: "Aleksy Kwiatkowski",
+    affiliation: "University of Cambridge",
+    area: "Complex Systems",
   }
 ];
 ---
@@ -148,7 +178,10 @@ We'll be sending out invitations soon. If you're working on computational approa
     <!--   </Sidenote> -->
     <!-- </p> -->
 
-    <h2>Our Team</h2>
+    <h2>Who We Are</h2>
+      <p>
+        Interested in our work? We'd love to hear from you.
+    </p>
     <div class="members-grid">
       {members.map((member) => (
         <div class="member-card">
@@ -161,19 +194,21 @@ We'll be sending out invitations soon. If you're working on computational approa
               member.name
             )}
           </h3>
-          {member.role && <p class="member-role">{member.role}</p>}
+	{member.role && <p class="member-role">{member.role}</p>}
+          <p class="member-affiliation">{member.affiliation}</p>
+          <p class="member-area">{member.area}</p>
         </div>
       ))}
     </div>
 
-    <div class="contact-section">
-      <h3>Get in Touch</h3>
-      <p>
-        Interested in our work? We'd love to hear from you.
-        <br />
-        Email: contact@computational-collective.org
-      </p>
-    </div>
+    <!-- <div class="contact-section"> -->
+    <!--   <h3>Get in Touch</h3> -->
+    <!--   <p> -->
+    <!--     Interested in our work? We'd love to hear from you. -->
+    <!--     <br /> -->
+    <!--     Email: contact@computational-collective.org -->
+    <!--   </p> -->
+    <!-- </div> -->
   </Article>
 </TufteLayout>
 
