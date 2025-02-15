@@ -6,6 +6,9 @@ export default defineConfig({
     base: '/', // Ensure we're serving from root
     outDir: './dist', // Default output directory
     publicDir: './public', // Explicitly set public directory
+    build: {
+        assets: true,
+    },
     server: {
         port: 3000,
     }
