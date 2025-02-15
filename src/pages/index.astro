@@ -23,36 +23,55 @@ const members = [
   {
     name: "Wojtek Treyde",
     role: "Co-lead",
-    affiliation: "Cambridge University",
-    area: "Complex Systems",
-    website: "https://wilson-lab.org"
+    website: "https://www.ineosoxford.ox.ac.uk/person/wojtek-treyde"
+  },
+  {
+    name: "Kieran Didi",
+    role: "Co-lead",
+    website: "https://kdidi.netlify.app/"
   },
   {
     name: "Jascha Achterberg",
     role: "Co-lead",
-    affiliation: "Oxford University",
-    area: "Computational Neuroscience",
-    website: "https://jascha.xyz"
+    website: "https://www.jachterberg.com/"
   },
   {
-    name: "Dr. Aisha Patel",
-    role: "Research Lead",
-    affiliation: "Imperial College London",
-    area: "Computational Chemistry",
-    website: "https://patel-group.ic.ac.uk"
+    name: "Rory Byrne",
+    role: "Lead-hacker",
+    website: "https://rory.bio/"
   },
   {
-    name: "Dr. Marcus Rodriguez",
-    role: "Senior Researcher",
-    affiliation: "Oxford University",
-    area: "High-Performance Computing"
+    name: "Kristina Kordova"
   },
   {
-    name: "Dr. Emma Thompson",
-    role: "Research Lead",
-    affiliation: "Cambridge University",
-    area: "Computational Biology",
-    website: "https://thompson-lab.cam.ac.uk"
+    name: "Michał Wójcik"
+  },
+  {
+    name: "Puria Radmard"
+  },
+  {
+    name: "Eva Sevenster"
+  },
+  {
+    name: "Inga Van den Bossche"
+  },
+  {
+    name: "Austin Mroz"
+  },
+  {
+    name: "Dan Akarca"
+  },
+  {
+    name: "Jakub Lála"
+  },
+  {
+    name: "Martin Buttenschoen"
+  },
+  {
+    name: "Filip Szczypiński"
+  },
+  {
+    name: "Aleksy Kwiatkowski"
   }
 ];
 ---
@@ -142,9 +161,7 @@ We'll be sending out invitations soon. If you're working on computational approa
               member.name
             )}
           </h3>
-          <p class="member-role">{member.role}</p>
-          <p class="member-affiliation">{member.affiliation}</p>
-          <p class="member-area">{member.area}</p>
+          {member.role && <p class="member-role">{member.role}</p>}
         </div>
       ))}
     </div>
