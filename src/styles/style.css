@@ -1,0 +1,114 @@
+/* src/styles/tufte.css */
+:root {
+  --primary-color: #111;
+  --background-color: #fffff8;
+  --text-color: #111;
+  --side-note-color: #666;
+  --link-color: #111;
+  --text-width: 72%;
+  --side-note-width: 50%;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --text-width: 85%;
+    --side-note-width: 85%;
+  }
+}
+
+body {
+  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+p {
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  padding-right: 0;
+  vertical-align: baseline;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  background: linear-gradient(var(--link-color), var(--link-color)) 0 100% / 1px 1px repeat-x;
+}
+
+a:hover {
+  background-size: 1px 1px;
+}
+
+/* For code blocks */
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  background: var(--side-note-background);
+  border-radius: 4px;
+}
+
+code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 1.1rem;
+}
+
+/* Additional utility classes */
+.no-bullets {
+  list-style: none;
+  padding-left: 0;
+}
+
+.subtle-link {
+  background: none;
+  color: var(--primary-color);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.subtle-link:hover {
+  opacity: 1;
+}
+
+/* Container for main content */
+.main-content {
+  width: var(--text-width);
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 760px) {
+  .main-content {
+    width: 84%;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

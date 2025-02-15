@@ -1,0 +1,96 @@
+---
+// src/components/Sidenote.astro
+interface Props {
+  number?: number;
+}
+
+const { number } = Astro.props;
+---
+
+<span class="sidenote-wrapper">
+  {number && (
+    <label for={`sidenote-${number}`} class="margin-toggle sidenote-number">
+      {number}
+    </label>
+  )}
+  {!number && <label for={`sidenote-${number}`} class="margin-toggle">⊕</label>}
+  <input type="checkbox" id={`sidenote-${number}`} class="margin-toggle" />
+  <span class="sidenote">
+    <slot />
+  </span>
+</span>
+
+<style>
+  .sidenote-wrapper {
+    position: relative;
+    display: inline;
+  }
+
+  .sidenote {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: var(--side-note-width);
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+    color: var(--side-note-color);
+  }
+
+  .sidenote-number {
+    counter-increment: sidenote-counter;
+  }
+
+  .sidenote-number:after {
+    content: counter(sidenote-counter);
+    position: relative;
+    vertical-align: baseline;
+    font-size: 0.8rem;
+    color: var(--side-note-color);
+  }
+
+  .margin-toggle {
+    display: none;
+  }
+
+  .sidenote-number:after {
+    content: counter(sidenote-counter);
+    font-family: et-book-roman-old-style;
+    vertical-align: super;
+    font-size: 0.8rem;
+    color: var(--side-note-color);
+  }
+
+  @media (max-width: 760px) {
+    .sidenote {
+      display: none;
+    }
+
+    .margin-toggle:checked + .sidenote {
+      display: block;
+      float: left;
+      left: 1rem;
+      clear: both;
+      width: 95%;
+      margin: 1rem 2.5%;
+      position: relative;
+      border-left: 2px solid var(--side-note-color);
+      padding-left: 1rem;
+    }
+
+    .margin-toggle {
+      display: inline;
+      color: var(--side-note-color);
+    }
+
+    .sidenote-number {
+      display: inline-block;
+      vertical-align: super;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+  }
+</style>
