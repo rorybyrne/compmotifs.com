@@ -25,6 +25,7 @@ const { title, author } = Astro.props;
     padding-top: 5rem;
     padding-bottom: 3rem;
     counter-reset: sidenote-counter;
+    text-width: auto;
   }
 
   article p, article footer, article table {
@@ -40,9 +41,10 @@ const { title, author } = Astro.props;
   }
 
   .logo {
-    width: 120px;
+    width: 200px;
     height: auto;
     flex-shrink: 0;
+    align-self: end;
   }
 
   .header > div {
