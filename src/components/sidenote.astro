@@ -1,19 +1,16 @@
 ---
 // src/components/Sidenote.astro
 interface Props {
-  number?: number;
+  number: number;
 }
 
 const { number } = Astro.props;
 ---
 
 <span class="sidenote-wrapper">
-  {number && (
-    <label for={`sidenote-${number}`} class="margin-toggle sidenote-number">
-      {number}
-    </label>
-  )}
-  {!number && <label for={`sidenote-${number}`} class="margin-toggle">⊕</label>}
+  <label for={`sidenote-${number}`} class="margin-toggle sidenote-number">
+    {number}
+  </label>
   <input type="checkbox" id={`sidenote-${number}`} class="margin-toggle" />
   <span class="sidenote">
     <slot />
@@ -48,13 +45,13 @@ const { number } = Astro.props;
     display: none;
   }
 
-  .sidenote-number:after {
-    content: counter(sidenote-counter);
-    font-family: et-book-roman-old-style;
-    vertical-align: super;
-    font-size: 0.8rem;
-    color: var(--side-note-color);
-  }
+  /* .sidenote-number:after { */
+  /*   content: counter(sidenote-counter); */
+  /*   font-family: et-book-roman-old-style; */
+  /*   vertical-align: super; */
+  /*   font-size: 0.8rem; */
+  /*   color: var(--side-note-color); */
+  /* } */
 
   @media (max-width: 760px) {
     .sidenote {
