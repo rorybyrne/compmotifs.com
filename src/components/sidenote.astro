@@ -42,7 +42,11 @@ const { number } = Astro.props;
   }
 
   .margin-toggle {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
   }
 
   /* .sidenote-number:after { */
@@ -70,16 +74,12 @@ const { number } = Astro.props;
       padding-left: 1rem;
     }
 
-    .margin-toggle {
-      display: inline;
-      color: var(--side-note-color);
-    }
-
     .sidenote-number {
       display: inline-block;
       vertical-align: super;
       font-size: 0.8rem;
       cursor: pointer;
+      color: var(--side-note-color);
     }
   }
 </style>
