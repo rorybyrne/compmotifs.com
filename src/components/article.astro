@@ -28,9 +28,6 @@ const { title, author } = Astro.props;
     text-width: auto;
   }
 
-  article p, article footer, article table {
-    width: var(--text-width);
-  }
 
   .header {
     display: flex;
@@ -41,10 +38,10 @@ const { title, author } = Astro.props;
   }
 
   .logo {
-    width: 200px;
+    width: 100px;
     height: auto;
     flex-shrink: 0;
-    align-self: end;
+    align-self: start;
   }
 
   .header > div {
