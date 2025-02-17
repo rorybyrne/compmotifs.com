@@ -70,7 +70,18 @@ const { number } = Astro.props;
       display: none;
     }
 
-    .margin-toggle:checked + .sidenote {
+
+    .sidenote-number {
+      display: inline-block;
+      vertical-align: super;
+      font-size: 0.8rem;
+      cursor: pointer;
+      color: var(--side-note-color);
+      position: relative;
+      z-index: 2;
+    }
+
+    .margin-toggle:checked + .sidenote-number + .sidenote {
       display: block;
       float: left;
       left: 1rem;
@@ -80,14 +91,6 @@ const { number } = Astro.props;
       position: relative;
       border-left: 2px solid var(--side-note-color);
       padding-left: 1rem;
-    }
-
-    .sidenote-number {
-      display: inline-block;
-      vertical-align: super;
-      font-size: 0.8rem;
-      cursor: pointer;
-      color: var(--side-note-color);
     }
   }
 </style>
