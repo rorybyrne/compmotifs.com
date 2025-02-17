@@ -8,8 +8,8 @@ const { number } = Astro.props;
 ---
 
 <span class="sidenote-wrapper">
-  <label for={`sidenote-${number}`} class="margin-toggle sidenote-number"></label>
   <input type="checkbox" id={`sidenote-${number}`} class="margin-toggle" />
+  <label for={`sidenote-${number}`} class="sidenote-number"></label>
   <span class="sidenote">
     <slot />
   </span>
@@ -50,11 +50,11 @@ const { number } = Astro.props;
   .margin-toggle {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
-    height: 0;
     width: 0;
-    pointer-events: none;
-    display: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
   }
 
   /* .sidenote-number:after { */
