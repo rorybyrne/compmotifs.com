@@ -3,6 +3,8 @@
 import TufteLayout from '../layouts/main.astro';
 import Article from '../components/article.astro';
 import Sidenote from '../components/sidenote.astro';
+import Timeline from '../components/timeline.astro';
+import TimelineEvent from '../components/timeline-event.astro';
 
 const researchAreas = [
   {
@@ -137,18 +139,69 @@ const members = [
       <!-- </Sidenote> -->
     </p>
 
-	<h2>We're Coming to San Francisco</h2>
-		<p>
-      This March, we're bringing our team to the Bay Area for a 2.5-day workshop focused on computational approaches to accelerating scientific discovery.
-      <Sidenote number={2}>
-        Hosted by our good friends at <a href="https://pebblebed.com">pebblebed</a>.
-      </Sidenote>
-      Throughout the workshop, we'll share our insights into computational bottlenecks we've identified across scientific disciplines and demonstrate a suite of open-source tools we've developed for accelerating experimentation.
-    </p>
-    <p>
-The workshop will combine presentations with hands-on hackathon sessions, creating space for immediate collaboration on ideas and tools. We're excited to connect with local academics and innovators working on similar challenges in computational science.
-We'll be sending out invitations soon. If you're working on computational approaches to accelerate scientific discovery and would like to join us, stay tuned for more details.
-		</p>
+    <h2>Events & Workshops</h2>
+    <Timeline>
+      <TimelineEvent 
+	date="June 7-8, 2025" 
+        title="London Workshop" 
+        location="London, United Kingdom">
+        <p>
+          Following on the success of the San Francisco workshop, we're bringing a hackathon to London focused on the very same topic of accelerating scientific discovery with computation.
+          <Sidenote number={3}>
+	    Registration is open, sign up below and join us.
+          </Sidenote>
+        </p>
+        <p>
+          Building on the momentum, we'll tackle the same themes—addressing computational bottlenecks and advancing science through new innovative tools.
+        </p>
+        <p>
+	  The London event will feature presentations from leading scientists and engineers, combined with hands-on coding sessions to create a space for real-time collaboration and experimentation. We'll share insights on computational challenges across scientific disciplines and demonstrate open-source tools that speed up experimentation.
+        </p>
+        <p>
+          We're looking to connect with UK academics, innovators, and organizations passionate about computational science. Interested in partnering or sponsoring? Please reach out—we'd love to explore collaboration opportunities.
+        </p>
+        <p>
+          <!-- <a href="https://lu.ma/apsqlxlj" class="register-button">Register for the event</a> -->
+	  <a
+	    href="https://lu.ma/event/evt-il3OcllDqFQK6s4"
+	    class="luma-checkout--button"
+	    data-luma-action="checkout"
+	    data-luma-event-id="evt-il3OcllDqFQK6s4"
+	  >
+	    Register Here
+	  </a>
+
+	  <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
+        </p>
+      </TimelineEvent>
+      <TimelineEvent 
+        date="March 26-27, 2025" 
+        title="San Francisco Workshop" 
+        location="San Francisco, California">
+        <p>
+          This March, we brought our team to the Bay Area for a 2-day workshop focused on computational approaches to accelerating scientific discovery.
+          <Sidenote number={2}>
+            Hosted by our good friends at <a href="https://pebblebed.com">pebblebed</a>.
+          </Sidenote>
+        </p>
+        <img src="/sf.png" alt="CompMotifs San Francisco event" class="timeline-image" />
+        <p>
+          It was wonderful to bring the academic and tooling communities together to accelerate science. A quick summary of some of the day's projects:
+        </p>
+        <ul>
+          <li><strong>GreatProtocols (Winner!)</strong>: AI-driven documentation tool ensuring complete and precise recording of experimental procedures.</li>
+          <li><strong><a href="https://github.com/CompMotifs/LikeMinds">LikeMinds</a></strong>: Discover collaborators or competitors based on similar scientific interests from BlueSky likes.</li>
+          <li><strong><a href="https://github.com/CompMotifs/deep-critic">Deep-Critic</a></strong>: An LLM ensemble for reviewing academic papers.</li>
+          <li><strong><a href="https://github.com/CompMotifs/byol-hierachy">BYOL Hierarchy</a></strong>: Creation of hierarchical BYOL embeddings for long-range reasoning.</li>
+          <li><strong>MINERVA</strong>: Automated generation of causal graphs offering alternative hypotheses for observed outcomes.</li>
+          <li><strong>Basemotif</strong>: A team chat app which connects to scientific datasets, experiment orchestration, and literature.</li>
+        </ul>
+        <p>
+          The winners are joining us for a UK edition of this hackathon!
+        </p>
+      </TimelineEvent>
+      
+    </Timeline>
 
     <!-- <h2>Research Areas</h2> -->
     <!-- <div class="research-areas"> -->
@@ -331,6 +384,33 @@ We'll be sending out invitations soon. If you're working on computational approa
   height: auto;
   margin: 2rem 0;
   border-radius: 4px;
+}
+
+/* Timeline styles */
+ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.register-button {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+  border: none;
+}
+
+.register-button:hover {
+  background: #333;
 }
 
 /* Add more vertical rhythm */

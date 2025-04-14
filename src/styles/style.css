@@ -123,6 +123,7 @@ code {
   margin-right: auto;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  position: relative; /* Ensure positioned children work correctly */
 }
 
 @media (max-width: 960px) {
