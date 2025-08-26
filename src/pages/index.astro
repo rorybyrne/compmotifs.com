@@ -146,35 +146,29 @@ const members = [
     <Timeline>
       <TimelineEvent 
 	date="June 7-8, 2025" 
-        title="London Workshop" 
+        title="London: Hack The Sciences" 
         location="London, United Kingdom">
         <p>
-          Following on the success of the San Francisco workshop, we're bringing a hackathon to London focused on the very same topic of accelerating scientific discovery with computation.
+          This June, we hosted Hack the Sciences London, bringing together 70+ attendees for two days of intensive hacking on computational tools for science.
           <Sidenote number={3}>
-	    Registration is open, sign up below and join us.
+            Powered by ARIA, future.bio, and IQ Capital, with support from Leap Labs, ScienceMachine, and Modal.
           </Sidenote>
         </p>
+        <img src="/hts_demo.jpeg" alt="Hack The Sciences London event" class="timeline-image" />
         <p>
-          Building on the momentum, we'll tackle the same themes—addressing computational bottlenecks and advancing science through new innovative tools.
+          The event kicked off with inspiring talks from Petar Veličković (Google DeepMind), Namshik Han (Milner Therapeutics Institute), Laura Porta (Sainsbury Wellcome Centre), Steven Bennett (Orbital Materials), and Alexander Pomberger (ReactWise).
         </p>
         <p>
-	  The London event will feature presentations from leading scientists and engineers, combined with hands-on coding sessions to create a space for real-time collaboration and experimentation. We'll share insights on computational challenges across scientific disciplines and demonstrate open-source tools that speed up experimentation.
+          Over the weekend, 12 interdisciplinary projects emerged. The winning teams were:
         </p>
+        <ul>
+          <li><strong><a href="https://github.com/Jollywatt/auto-commit">ForGit About It!</a> (Judge Prize, £500)</strong>: LLM-powered version control that automatically tracks and commits code without user input.</li>
+          <li><strong>ELIE (Judge Prize, £500)</strong>: An adaptive explanation engine enabling interdisciplinary scientific communication.</li>
+          <li><strong>Enzyme-QM (Community Prize, £250)</strong>: Automates generation of transition state data for enzyme design.</li>
+          <li><strong><a href="https://github.com/pntoka/protocompare">Protocompare</a> (Community Prize, £250)</strong>: Transforms protocols into searchable formats with similarity metrics and safety scores.</li>
+        </ul>
         <p>
-          We're looking to connect with UK academics, innovators, and organizations passionate about computational science. Interested in partnering or sponsoring? Please reach out—we'd love to explore collaboration opportunities.
-        </p>
-        <p>
-          <!-- <a href="https://lu.ma/apsqlxlj" class="register-button">Register for the event</a> -->
-	  <a
-	    href="https://lu.ma/apsqlxlj?utm_source=website"
-	    class="luma-checkout--button"
-	    data-luma-action="checkout"
-	    data-luma-event-id="evt-il3OcllDqFQK6s4"
-	  >
-	    Register Here
-	  </a>
-
-	  <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
+          Special thanks to our SF winners Jesse Cotari and Jeff Gerold who joined us from California, and to our organising team: Wojtek, Aleksy, Jascha, Inga, Jakub, Kieran, Rory, Danyal, and Eva.
         </p>
       </TimelineEvent>
       <TimelineEvent 
@@ -261,6 +255,12 @@ const members = [
           <p class="member-area">{member.area}</p>
         </div>
       ))}
+    </div>
+
+    <div class="powered-by-section">
+      <a href="https://www.aria.org.uk/" target="_blank" rel="noopener noreferrer">
+        <img src="/aria.png" alt="ARIA - Advanced Research + Invention Agency" class="sponsor-logo" />
+      </a>
     </div>
 
     <!-- <div class="contact-section"> -->
@@ -460,5 +460,22 @@ p {
   .member-card {
     padding: 1.5rem;
   }
+}
+
+.powered-by-section {
+  text-align: center;
+  margin: 4rem 0 2rem 0;
+  padding-top: 3rem;
+}
+
+.sponsor-logo {
+  max-width: 200px;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.sponsor-logo:hover {
+  opacity: 1;
 }
 </style>
