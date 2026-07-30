@@ -27,7 +27,7 @@ const members = [
     role: "Co-lead",
     affiliation: "University of Oxford",
     area: "Chemistry",
-    website: "https://wtreyde.github.io/web/"
+    website: "https://wtreyde.github.io"
   },
   {
     name: "Kieran Didi",
@@ -128,6 +128,23 @@ const members = [
 	<p>
 		We focus on computational motifs – shared patterns and challenges that appear across scientific disciplines. By identifying and solving these core bottlenecks, we can create impact at scale, accelerating discovery across multiple fields simultaneously. This interdisciplinary approach allows us to spot opportunities that might be missed when working within traditional boundaries.
     </p>
+
+	<aside class="publication-callout">
+		<p class="callout-label">New publication · <em>Patterns</em>, 2026</p>
+		<h3 class="callout-title">
+			<a href="https://www.cell.com/patterns/fulltext/S2666-3899(26)00027-9" target="_blank" rel="noopener noreferrer">
+				Organizing across disciplines to tackle shared computational challenges
+			</a>
+		</h3>
+		<p class="callout-authors">Treyde, Kwiatkowski, Achterberg, Akarca, Buttenschoen, Byrne, Didi, Kordova, Lála, Langford, Mroz, Radmard, Szczypiński, Sevenster, Van den Bossche &amp; Wójcik</p>
+		<p class="callout-summary">
+			Sixteen early-career computational scientists spanning physics, biology, chemistry, and neuroscience spent nine months in workshops and hackathons agreeing on the computational motifs that recur across their disciplines, building prototype tools to tackle them, and distilling recommendations for the wider research community.
+		</p>
+		<p class="callout-action">
+			<a href="https://www.cell.com/patterns/fulltext/S2666-3899(26)00027-9" target="_blank" rel="noopener noreferrer">Read the paper</a>
+			<span class="callout-doi">doi:10.1016/j.patter.2026.101518</span>
+		</p>
+	</aside>
 
 	<p class="social-links">
 		<a href="https://lu.ma/compmotifs" target="_blank" rel="noopener noreferrer">Events (Luma)</a>
@@ -286,6 +303,95 @@ const members = [
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 2.5rem;
+}
+
+.publication-callout {
+  background: #fffff2;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 1.6rem 1.8rem 1.4rem;
+  margin: 2.5rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  transition: box-shadow 0.2s ease;
+}
+
+.publication-callout:hover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+}
+
+.callout-label {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--side-note-color);
+}
+
+.callout-label em {
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0.06em;
+}
+
+.callout-title {
+  margin: 0.7rem 0 0 0;
+  font-size: 1.35rem;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.callout-title a {
+  background: none;
+  color: var(--primary-color);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+}
+
+.callout-title a:hover {
+  border-bottom-color: var(--primary-color);
+}
+
+.callout-authors {
+  margin: 0.6rem 0 0 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--side-note-color);
+}
+
+.callout-summary {
+  margin: 0.9rem 0 0 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.callout-action {
+  margin: 1.1rem 0 0 0;
+  font-size: 0.9rem;
+}
+
+.callout-action a {
+  background: none;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.callout-action a:hover {
+  opacity: 0.7;
+}
+
+.callout-action a::after {
+  content: " \2192";
+}
+
+.callout-doi {
+  margin-left: 1rem;
+  color: var(--side-note-color);
+  font-size: 0.85rem;
 }
 
 .social-links {
@@ -487,6 +593,20 @@ p {
   
   .member-card {
     padding: 1.5rem;
+  }
+
+  .publication-callout {
+    padding: 1.3rem 1.4rem 1.2rem;
+  }
+
+  .callout-title {
+    font-size: 1.2rem;
+  }
+
+  .callout-doi {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5rem;
   }
 }
 
